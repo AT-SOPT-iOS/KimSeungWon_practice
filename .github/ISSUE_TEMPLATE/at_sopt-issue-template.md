@@ -1,7 +1,7 @@
 ---
 name: AT_SOPT ISSUE Template
 about: AT SOPT iOS 36 주차별 실습 과제에 사용할 issue 템플릿입니다.
-title: "[Feat] n차 세미나 실습 과제"
+title: "[week_] 세미나 실습 과제"
 labels: ''
 assignees: SeungWon1125
 
