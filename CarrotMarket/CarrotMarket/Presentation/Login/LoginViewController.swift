@@ -37,6 +37,7 @@ final class LoginViewController: UIViewController {
         textField.placeholder = "비밀번호"
         textField.font = .pretendard(.regular, size: 14)
         textField.backgroundColor = .systemGray6
+        textField.isSecureTextEntry = true
         textField.addLeftView()
         textField.configureDefaultTextField()
         textField.roundCorners(6)
