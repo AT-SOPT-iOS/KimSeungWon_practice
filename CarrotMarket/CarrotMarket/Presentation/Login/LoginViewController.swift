@@ -60,7 +60,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setLayout()
+        setStyle()
         setUI()
     }
 }
@@ -68,17 +68,17 @@ final class LoginViewController: UIViewController {
 // MARK: - Functions
 
 extension LoginViewController {
-    private func setLayout() {
+    private func setStyle() {
+        view.backgroundColor = .white
+    }
+    
+    private func setUI() {
         view.addSubviews(
             titleLabel,
             idTextField,
             passwordTextField,
             loginButton
         )
-    }
-    
-    private func setUI() {
-        view.backgroundColor = .white
     }
     
     private func presentToWelcomeViewController() {

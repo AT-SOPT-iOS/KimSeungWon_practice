@@ -57,7 +57,7 @@ final class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setLayout()
+        setStyle()
         setUI()
         
         bindId()
@@ -67,17 +67,17 @@ final class WelcomeViewController: UIViewController {
 // MARK: - Functions
 
 extension WelcomeViewController {
-    private func setLayout() {
+    private func setStyle() {
+        view.backgroundColor = .white
+    }
+    
+    private func setUI() {
         view.addSubviews(
             mainImageView,
             titleLabel,
             nextButton,
             backButton
         )
-    }
-    
-    private func setUI() {
-        view.backgroundColor = .white
     }
     
     private func backToLoginViewController() {
