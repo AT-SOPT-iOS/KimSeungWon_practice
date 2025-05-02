@@ -90,10 +90,10 @@ extension ClosureLoginViewController {
     
     private func pushToWelcomeViewController() {
         let viewController = ClosureWelcomeViewController()
-        viewController.loginDataCompletion = { [weak self] data in
-            guard let self else { return }
-            print("클로저로 받아온 id: \(data)")
-        }
+//        viewController.loginDataCompletion = { [weak self] data in
+//            guard let self else { return }
+//            print("클로저로 받아온 id: \(data)")
+//        }
         viewController.setLabelText(idTextField.text)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
