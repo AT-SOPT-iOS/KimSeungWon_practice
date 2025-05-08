@@ -7,7 +7,13 @@
 
 import Foundation
 
-public struct HTTPMethod: RawRepresentable, Hashable {
+public struct HTTPMethod: RawRepresentable {
+    
+    public let rawValue: String
+    
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
     
     public static let post = HTTPMethod(rawValue: "POST")
     
@@ -16,10 +22,4 @@ public struct HTTPMethod: RawRepresentable, Hashable {
     public static let patch = HTTPMethod(rawValue: "PATCH")
     
     public static let delete = HTTPMethod(rawValue: "DELETE")
-    
-    public let rawValue: String
-    
-    public init(rawValue: String) {
-        self.rawValue = rawValue
-    }
 }
