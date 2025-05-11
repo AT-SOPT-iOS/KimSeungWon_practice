@@ -13,7 +13,7 @@ public protocol TargetType {
     var method: HTTPMethod { get }
     var sampleData: Data { get }
     var task: NetworkTask { get }
-    var headers: [String: String]? { get }
+    var headers: HeaderField { get }
 }
 
 public extension TargetType {
@@ -32,4 +32,20 @@ public enum NetworkTask {
 
 public enum ParameterEncoding {
     case queryString
+}
+
+// MARK: - HeaderField
+
+public enum HeaderField {
+    case contentTypeJSON
+    case userId(Int)
+    
+    var keyValue: [String: String]? {
+        switch self {
+        case .contentTypeJSON:
+            return ["Content-Type": "application/json"]
+        case .userId(let id):
+            return ["Content-Type": "application/json", "userId": String(id)]
+        }
+    }
 }

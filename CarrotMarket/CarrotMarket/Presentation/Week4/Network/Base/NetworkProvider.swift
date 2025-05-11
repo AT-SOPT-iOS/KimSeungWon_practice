@@ -60,8 +60,8 @@ struct NetworkProvider<Target: TargetType> {
         
         // MARK: - Header
         
-        if let headerField = target.headers {
-            _ = headerField.map { (key, value) in
+        if let headerField = target.headers.keyValue {
+            headerField.forEach { key, value in
                 request.addValue(value, forHTTPHeaderField: key)
             }
         }

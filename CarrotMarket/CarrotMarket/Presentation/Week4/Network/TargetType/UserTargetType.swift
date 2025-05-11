@@ -53,14 +53,14 @@ extension UserTargetType: TargetType {
         }
     }
     
-    var headers: [String : String]? {
+    var headers: HeaderField {
         switch self {
         case .fetchNickname:
-            return ["Content-Type": "application/json"]
+            return .contentTypeJSON
         case .changeNickname(_, let userId):
-            return ["Content-Type": "application/json", "userId": String(userId)]
+            return .userId(userId)
         case .fetchMyNickname(let userId):
-            return ["Content-Type": "application/json", "userId": String(userId)]
+            return .userId(userId)
         }
     }
 }

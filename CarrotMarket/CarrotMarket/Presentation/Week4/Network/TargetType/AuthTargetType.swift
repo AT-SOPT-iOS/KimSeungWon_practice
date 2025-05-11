@@ -44,7 +44,7 @@ extension AuthTargetType: TargetType {
         }
     }
     
-    var headers: [String : String]? {
-        return ["Content-Type": "application/json"]
+    var headers: HeaderField {
+        return .contentTypeJSON
     }
 }
