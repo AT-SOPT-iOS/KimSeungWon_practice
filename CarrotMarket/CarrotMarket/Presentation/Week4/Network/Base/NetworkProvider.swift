@@ -44,7 +44,7 @@ struct NetworkProvider<Target: TargetType> {
                 let requestBody = try JSONEncoder.encode(encodable)
                 body = requestBody
             } catch {
-                print(error)
+                throw NetworkError.requestEncodingError
             }
         }
         
