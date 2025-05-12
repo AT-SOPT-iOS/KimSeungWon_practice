@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BaseResponseBody<T: ResponseModelType>: Codable {
+struct BaseResponseBody<T: ResponseModelType>: ResponseModelType {
     let success: Bool
     let code: String
     let message: String

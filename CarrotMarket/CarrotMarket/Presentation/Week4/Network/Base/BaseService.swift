@@ -8,16 +8,10 @@
 import Foundation
 
 class BaseService<Target: TargetType> {
-    let provider: NetworkProvider<Target>
+    let provider = NetworkProvider<Target>()
 
-    init(provider: NetworkProvider<Target>) {
-        self.provider = provider
-    }
-
-    func request<T: ResponseModelType>(
-        with target: Target
-    ) async throws -> BaseResponseBody<T> {
-        let urlRequest = try provider.request(target)
+    func request<T: ResponseModelType>(with target: Target) async throws -> BaseResponseBody<T> {
+        let urlRequest = try provider.makeRequest(target)
         
         NetworkLogger.logRequest(urlRequest, target: target)
         

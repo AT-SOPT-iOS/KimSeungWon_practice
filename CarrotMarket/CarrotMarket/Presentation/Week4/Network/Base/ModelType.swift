@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol RequestModelType: Codable {}
+protocol RequestModelType: Encodable {}
 
-protocol ResponseModelType: Codable {}
+protocol ResponseModelType: Decodable {}

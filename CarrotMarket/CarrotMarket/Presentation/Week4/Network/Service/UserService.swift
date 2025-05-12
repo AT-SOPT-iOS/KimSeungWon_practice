@@ -8,11 +8,9 @@
 import Foundation
 
 final class UserService: BaseService<UserTargetType> {
-    static let shared = UserService(provider: NetworkProvider<UserTargetType>())
     
-    private override init(provider: NetworkProvider<UserTargetType>) {
-        super.init(provider: provider)
-    }
+    static let shared = UserService()
+    private override init() {}
     
     // MARK: - Functions
     

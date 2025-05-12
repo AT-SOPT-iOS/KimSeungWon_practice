@@ -8,11 +8,9 @@
 import Foundation
 
 final class AuthService: BaseService<AuthTargetType> {
-    static let shared = AuthService(provider: NetworkProvider<AuthTargetType>())
-
-    private override init(provider: NetworkProvider<AuthTargetType>) {
-        super.init(provider: provider)
-    }
+    
+    static let shared = AuthService()
+    private override init() {}
     
     // MARK: - Functions
     

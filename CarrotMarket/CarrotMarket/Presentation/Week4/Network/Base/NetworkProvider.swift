@@ -8,7 +8,7 @@
 import Foundation
 
 struct NetworkProvider<Target: TargetType> {
-    func request(_ target: Target) throws -> URLRequest {
+    func makeRequest(_ target: Target) throws -> URLRequest {
         
         // MARK: - URL Path
         
